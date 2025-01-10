@@ -39,6 +39,13 @@ const Dictionary = () => {
 //     setWord(value);
 //   }, 2000);
 
+
+const handleKeyDown=(e)=>{
+if(e.key ==="Enter"){
+    findMeaning();
+}
+}
+
   return (
     <Fragment>
       <h1>Dictionary App</h1>
@@ -46,7 +53,7 @@ const Dictionary = () => {
         type="text"
         value={word}
         placeholder="Search For a word"
-        onKeyDown={findMeaning}
+        onKeyDown={handleKeyDown}
         onChange={(e)=>setWord(e.target.value)}
       />
       <button onClick={findMeaning}>Search</button>
